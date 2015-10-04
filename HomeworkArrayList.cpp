@@ -1,9 +1,9 @@
 #include <iostream>
-#include <string>
 #include "HomeworkDatabase.h"
 
 using namespace std;
 
+template < class HomeworkDatabase>
 class HomeworkArrayList
 {
 	private:
@@ -11,7 +11,7 @@ class HomeworkArrayList
 		int maxSize;
 		int curr;
 		int listSize;
-		HomeworkDatabase *homework;
+		HomeworkDatabase* homework;
 		
 	public:
 		

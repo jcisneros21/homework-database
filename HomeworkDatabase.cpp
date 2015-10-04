@@ -1,24 +1,25 @@
-HomeworkDatabase::HomeworkDatabase(string className, string homework, int dueDate)
+#include "HomeworkDatabase.h"
+
+HomeworkDatabase::HomeworkDatabase(const std::string className, const std::string homework, int dueDate)
 {
 	this->className = className;
 	this->homework = homework;
 	this->dueDate = dueDate;
 }
 
-HomeworkDatabase::HomeworkDatabase()
-{}
+HomeworkDatabase::HomeworkDatabase() : dueDate(){}
 
-string getClass::getClass()
+std::string HomeworkDatabase::getClass()
 {
 	return className;
 }
 
-string getHomework::getHomework()
+std::string HomeworkDatabase::getHomework()
 {
 	return homework;
 }
 
-int getDueDate::getDueDate()
+int HomeworkDatabase::getDueDate()
 {
 	return dueDate;
 }

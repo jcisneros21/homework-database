@@ -1,19 +1,22 @@
+#ifndef HomeworkDatabase_H
+#define HomeworkDatabase_H
 #include <string>
-using namespace std;
 
 class HomeworkDatabase
 {
 	private:
 	
-		string className;
-		string homework;
+                std::string className;
+                std::string homework;
 		int dueDate;
 		
 	public:
 	
-		HomeworkDatabase(string className, string homework, int dueDate);
+		HomeworkDatabase(const std::string className, const std::string homework, int dueDate);
 		HomeworkDatabase();
-		string getClass();
-		string getHomework();
+                std::string getClass();
+                std::string getHomework();
 		int getDueDate();
 };
+
+#endif
