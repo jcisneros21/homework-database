@@ -60,17 +60,25 @@ class HomeworkArrayList
 		}
 		
 		void sortByDate()
-		{
-			HomeworkDatabase *comp;
-			comp = &homework[0];
+		{ 
+                        HomeworkDatabase *copy;
 			for (int i =0; i < listSize-1; i++)
-			{
-				if (comp->getDueDate() < homework[i+1].getDueDate())
-				{
-					comp = &homework[i+1];
-				}		
+			{ 
+                            int store = homework[i].getDueDate();
+                            int low = 0;
+			    for (int j=i; j < listSize-1; j++)
+                            {
+                                if ( homework[j].getDueDate() < store)
+                                {
+                                    store = homework[j].getDueDate();
+                                    low = j;
+                                }  
+                            }
+                            copy = &homework[i];
+                            homework[i] = homework[low];
+                            homework[low] = &copy
 			}
-			delete comp;
+                        delete copy;
 		}
 		
 		void sortByClass()
